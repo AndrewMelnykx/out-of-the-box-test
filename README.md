@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+🧰 out-of-the-box 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Screenshot 2025-08-04 212025
+🔗 Live Demo: https://andrewmelnykx.github.io/out-of-the-box-test/
 
-Currently, two official plugins are available:
+📌 Overview out-of-the-box is a fully responsive, modern single-page React application built with Vite. It follows BEM naming conventions for SCSS, features Redux Toolkit for state management, includes robust testing, smooth animations with Framer Motion, and API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Tech Stack Framework: React + Vite
 
-## Expanding the ESLint configuration
+Styling: SCSS with BEM methodology
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+UI Enhancements:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+react-toastify (notifications)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+react-scroll-height (scroll behavior)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+framer-motion (animations) ✅
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Data & State:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+axios for HTTP requests
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+@reduxjs/toolkit for state management
+
+Testing:
+
+jest, @testing-library/react
+
+📂 Project Structure bash Copy Edit src/ ├── assets/ # Images, icons, SVGs ├── components/ # Reusable UI components (BEM-based) ├── features/ # Redux slices/features ├── pages/ # Main views/pages ├── services/ # Axios API abstraction ├── styles/ # Global styles and variables ├── utils/ # Utility functions ├── tests/ # Unit & integration tests └── main.tsx / index.tsx # Entry point 🚀 Getting Started ✅ Prerequisites Node.js (v18+ recommended)
+
+pnpm installed globally:
+
+bash Copy Edit npm install -g pnpm 📦 Install Dependencies bash Copy Edit pnpm install 🧪 Run Tests bash Copy Edit pnpm test 🛠 Start Development Server bash Copy Edit pnpm dev 🏗 Build for Production bash Copy Edit pnpm build 🌐 Deployment This project is deployed using GitHub Pages: https://andrewmelnykx.github.io/out-of-the-box-test/
+
+🔗 Live Site: 🌿 Branch: gh-pages
+
+🧾 Manual Deployment Instructions Build the app:
+
+bash Copy Edit pnpm build Deploy the contents of dist/ to the gh-pages branch:
+
+bash Copy Edit pnpm install --save-dev gh-pages pnpm run build npx gh-pages -d dist
