@@ -1,0 +1,22 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  &__video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
+}
